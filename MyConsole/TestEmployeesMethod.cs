@@ -30,6 +30,15 @@ namespace MyConsole
 			emp2.address = "Taipei"; //設定員工地址
 			emp2.phone = "0912345678"; //設定員工電話
 			emp2.birthdate = new DateTime(2002, 1, 1); //設定員工生日
+
+
+			//核算薪水 呼叫物件方法
+			emp1.calSalary(22, 10000);
+			emp2.calSalary(22, 10000);
+
+			//輸出
+			Console.WriteLine($"編號:{emp1.id} 姓名:{emp1.name} 底薪:{emp1.salary} 實際薪資:{emp1.actSalary} 生日:{emp1.birthdate}");
+			Console.WriteLine($"編號:{emp2.id} 姓名:{emp2.name} 底薪:{emp2.salary} 實際薪資:{emp2.actSalary} 生日:{emp2.birthdate}");
 		}
 	}
 }
