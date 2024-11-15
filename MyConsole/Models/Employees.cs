@@ -46,7 +46,7 @@ namespace MyConsole.Models
 			this.address = address;
 		}
 
-		//建構子Constuctor Overloading (多載) 使用參數架構進行簽章
+		//建構子Constuctor Overloading(多載) 使用參數架構進行簽章
 		public Employees() //指向父親Object()建構子空參數
 		{
 
