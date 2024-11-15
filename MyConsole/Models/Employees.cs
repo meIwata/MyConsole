@@ -36,7 +36,21 @@ namespace MyConsole.Models
 		private static String _companyAddress = "台北市公園路"; //把地址保護起來，改成private，需要封裝的名稱需改成底線命名
 
 
-		//編譯會產生預設建構子Constructor(空參數的)
+		//編譯會產生預設架構子Constructor(空參數的) 這一個建構子第一行 指向父親的空參數架構子
+		//自訂建構子 往往需要參數(初始化物件資料)--往往需要有參數--不會有預設建構子
+		//建構子名稱與類別名稱一樣
+		public Employees(Int32 id, String name, String address) //指向父親Object()建構子空參數
+		{
+			this.id = id;
+			this.name = name;
+			this.address = address;
+		}
+
+		//建構子Constuctor Overloading (多載) 使用參數架構進行簽章
+		public Employees() //指向父親Object()建構子空參數
+		{
+
+		}
 
 		//Instance Property(物件屬性) 透過物件進行存取
 		//規劃屬性 Property(代理一個被封裝資料欄位) 可以雙向setter and getter (也可以單向)
