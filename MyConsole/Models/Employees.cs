@@ -101,6 +101,14 @@ namespace MyConsole.Models
 
 		//精靈產生出來的，使用lambda進行屬性的實作
 		public int actSalary { get => _actSalary; } //實際薪水只能讀不能設定，所以setter刪掉，命名部分更改成actSalary
+		//也可以寫成這樣
+		/*
+		public int actSalary {
+			get { 
+			return _actSalary; 
+			}
+		}
+		*/
 
 		//薪資核算方法 Method - 月薪制 (針對Employee的功能)
 		public void calSalary(Int32 days, Int32 bonus) //第一行定義 抽象描述，這裡不寫static，因為他是個別物件存在方法
