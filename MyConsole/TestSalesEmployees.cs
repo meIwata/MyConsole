@@ -27,6 +27,14 @@ namespace MyConsole
                 birthdate = new DateTime(2002, 1, 1)
             }; //物件初始化
 
+            //建構業務員
+            Sales sales2 = new Sales(3, "Tom", "Taipei", 1000000)
+            {
+                phone = "0912345678",
+                birthdate = new DateTime(2003, 1, 1),
+                salary = 30000 //繼承來自Employees Property
+            };
+
 
             //業務實際業績
             sales1.ActSalesAmount = 1000000;
@@ -40,6 +48,8 @@ namespace MyConsole
             //輸出
             Console.WriteLine($"編號:{emp1.id} 姓名:{emp1.name} 底薪:{emp1.salary} 生日:{emp1.birthdate} 實際薪資:{emp1.actSalary}");
             Console.WriteLine($"編號:{sales1.id} 姓名:{sales1.name} 底薪:{sales1.salary} 生日:{sales1.birthdate} 業績:{sales1.SalesAmount} 實際業績:{sales1.ActSalesAmount} 業績獎金:{sales1.Commission} 實際薪資:{sales1.actSalary}");
+            Console.WriteLine($"編號:{sales2.id} 姓名:{sales2.name} 底薪:{sales2.salary} 生日:{sales2.birthdate} 業績:{sales2.SalesAmount} ");
+
         }
     }
 }

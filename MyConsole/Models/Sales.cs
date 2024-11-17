@@ -55,5 +55,26 @@ namespace MyConsole.Models
                 _commission = (Int32)(_actSalesAmount * 0.01);
             }
         }
+
+
+        //Overriding 覆寫父親Property(改版)
+        public override int salary 
+        {
+            set 
+            {
+                if (value > 50000)
+                {
+                    _salary = value;
+                }
+                else 
+                {
+                    _salary = 50000; //起薪是50000
+                }
+            }
+            get 
+            {
+                return _salary;
+            } 
+        }
     }
 }

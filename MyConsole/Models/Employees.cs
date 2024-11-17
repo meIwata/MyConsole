@@ -54,7 +54,8 @@ namespace MyConsole.Models
 
 		//Instance Property(物件屬性) 透過物件進行存取
 		//規劃屬性 Property(代理一個被封裝資料欄位) 可以雙向setter and getter (也可以單向)
-		public Int32 salary { //正式名稱留給代理
+		//Property 子類別可能改版
+		public virtual Int32 salary { //正式名稱留給代理
 
 			//設定區段 Setter
 			set {
