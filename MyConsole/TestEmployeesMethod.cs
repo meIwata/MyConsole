@@ -19,7 +19,8 @@ namespace MyConsole
 			emp1.id = 1; //設定員工編號
 			emp1.name = "Eric"; //設定員工姓名
 			emp1.salary = 50000; //設定員工薪資
-			emp1.address = "Taipei"; //設定員工地址
+			//emp1._salary = 10000; //protected不能直接存取
+            emp1.address = "Taipei"; //設定員工地址
 			emp1.phone = "0912345678"; //設定員工電話
 			emp1.birthdate = new DateTime(2001, 1, 1); //設定員工生日
 

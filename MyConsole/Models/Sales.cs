@@ -19,6 +19,25 @@ namespace MyConsole.Models
             _salesAmount = salesAmount; //目標業績
         }
 
+        //建構子多載Constructor Overloading
+        public Sales(Int32 id, String name, String address, Int32 salary, Int32 salesAmount) 
+        {
+            this.id= id; 
+            this.name= name;
+            this.address= address;
+
+            //業務員的起薪邏輯與一班員工不一樣，
+            if (salary > 50000) 
+            {
+                _salary=salary;
+            }
+            else
+            {
+                //起薪50000
+                _salary = 50000;
+            }
+        }
+
 
         //精靈產生出來的，使用lambda進行屬性的實作
         public int SalesAmount { get => _salesAmount; set => _salesAmount = value; } //業績需要經過計算

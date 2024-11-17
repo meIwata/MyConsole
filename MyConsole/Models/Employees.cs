@@ -17,8 +17,8 @@ namespace MyConsole.Models
 		public Int32 id; //員工編號
 		public String name; //員工姓名
 
-		//透過修飾詞private來保護資料(封裝在這一個類別內部，或者產生個體物件內部)
-		private Int32 _salary; //要封裝的名稱需改成底線命名
+		//透過修飾詞private來保護資料(封裝在這一個類別內部，或者產生個體物件內部)，如果對子類別不封裝呢??? 改成protected
+		protected Int32 _salary; //要封裝的名稱需改成底線命名
 		public String address; //員工地址
 		public String phone; //員工電話
 		
