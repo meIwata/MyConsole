@@ -22,14 +22,14 @@ namespace MyConsole.Models
         //建構子多載Constructor Overloading
         public Sales(Int32 id, String name, String address, Int32 salary, Int32 salesAmount) 
         {
-            this.id= id; 
-            this.name= name;
-            this.address= address;
+            this.id = id; 
+            this.name = name;
+            this.address = address;
 
             //業務員的起薪邏輯與一班員工不一樣，
             if (salary > 50000) 
             {
-                _salary=salary;
+                _salary = salary; //protected member 不封裝子類別可以存取
             }
             else
             {
