@@ -26,7 +26,7 @@ namespace MyConsole.Models
             this.name = name;
             this.address = address;
 
-            //業務員的起薪邏輯與一班員工不一樣，
+            //業務員的起薪邏輯與一般員工不一樣
             if (salary > 50000) 
             {
                 _salary = salary; //protected member 不封裝子類別可以存取
@@ -36,6 +36,7 @@ namespace MyConsole.Models
                 //起薪50000
                 _salary = 50000;
             }
+            _salesAmount = salesAmount; //目標業績
         }
 
 
