@@ -21,7 +21,7 @@ namespace MyConsole
             }; //物件初始化
 
             //建構一個業務員物件
-            Sales sales1 = new Sales(2, "Linda", "Taipei", 60000, 1000000)
+            Sales sales1 = new Sales(2, "Linda", "Taipei", 40000, 1000000)
             {
                 phone = "0912345678",
                 birthdate = new DateTime(2002, 1, 1)

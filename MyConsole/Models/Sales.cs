@@ -12,6 +12,7 @@ namespace MyConsole.Models
         //資料欄位 Data Field
         private Int32 _salesAmount; //業績
         private Int32 _commission; //佣金，唯讀屬性
+        private Int32 _actSalesAmount; //實際佣金
 
         // 自訂建構子且明確指向父親建構子: base(...) 指向父親特定建構子
         public Sales(Int32 id, String name, String address, Int32 salesAmount): base(id, name, address) 
@@ -43,5 +44,16 @@ namespace MyConsole.Models
         //精靈產生出來的，使用lambda進行屬性的實作
         public int SalesAmount { get => _salesAmount; set => _salesAmount = value; } //業績需要經過計算
         public int Commission { get => _commission; } //佣金部分是唯讀屬性，只能查詢不能設定
+        public int ActSalesAmount { get => _actSalesAmount; set => _actSalesAmount = value; }
+
+
+        //Method - 業績獎金核算
+        public void calCommision() 
+        {
+            if (_actSalesAmount >= _actSalesAmount * 0.9) 
+            {
+                _commission = (Int32)(_actSalesAmount * 0.01);
+            }
+        }
     }
 }
