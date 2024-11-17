@@ -76,5 +76,14 @@ namespace MyConsole.Models
                 return _salary;
             } 
         }
+
+        //薪資核算方式進行改版 Overriding
+        public override void calSalary(int days, int bonus)
+        {
+            base.calSalary(days, bonus); //呼叫父親方法
+
+            //業績獎金加上去
+            this._actSalary += _commission;
+        }
     }
 }

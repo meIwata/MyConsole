@@ -25,8 +25,8 @@ namespace MyConsole.Models
 		//設定滿18歲才能設定生日
 		private DateTime _birthdate; //要封裝的名稱需改成底線命名
 
-		//實際薪水Data Field需要保護起來，不被更改
-		private Int32 _actSalary; //要封裝的名稱需改成底線命名，待會封裝只給getter，只能讀不能設定
+        //實際薪水Data Field需要保護起來，不被更改
+        protected Int32 _actSalary; //要封裝的名稱需改成底線命名，待會封裝只給getter，只能讀不能設定
 
 
 		//共用資料欄Data Field(靜態)  class member，如果規劃不能改的常數，就要寫成const，隱含為static
@@ -126,7 +126,8 @@ namespace MyConsole.Models
 		*/
 
 		//薪資核算方法 Method - 月薪制 (針對Employee的功能)
-		public void calSalary(Int32 days, Int32 bonus) //第一行定義 抽象描述，這裡不寫static，因為他是個別物件存在方法
+		//VMI(Virtual Method Invocation) 虛擬方法呼叫
+		public virtual void calSalary(Int32 days, Int32 bonus) //第一行定義 抽象描述，這裡不寫static，因為他是個別物件存在方法
 		{
 			//出勤天數
 			if (days > 0) { //出勤天數至少要>0，才進行薪資核算
