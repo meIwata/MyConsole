@@ -52,6 +52,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestEmployees.cs" />
+    <Compile Include="TestEmployeesArray.cs" />
     <Compile Include="TestEmployeesMethod.cs" />
     <Compile Include="TestPoly.cs" />
     <Compile Include="TestSalesEmployees.cs" />
