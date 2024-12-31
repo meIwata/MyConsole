@@ -22,5 +22,10 @@ namespace MyConsole.Models
             this._tech = tech;
             this._techBons = techBons;
         }
+
+
+        //Property設定
+        public int TechBons { get => _techBons; set => _techBons = value; } //可以設定也可以取得
+        public string Tech { get => _tech; set => _tech = value; }
     }
 }
