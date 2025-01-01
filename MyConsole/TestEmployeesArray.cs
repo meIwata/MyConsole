@@ -44,7 +44,7 @@ namespace MyConsole
                 birthdate = new DateTime(2004, 1, 1)
             };
 
-            //走訪每一個員工
+            //走訪每一個員工(通稱為員工Employees)
             foreach (Employees emp in emps) {
                 
                 //輸出
