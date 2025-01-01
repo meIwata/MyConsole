@@ -47,6 +47,14 @@ namespace MyConsole
             //走訪每一個員工(通稱為員工Employees)
             foreach (Employees emp in emps) {
                 
+                //判斷本尊是否業務員
+                if (emp is Sales) {
+                    //明確性轉型Explicit casting
+                    ((Sales)emp).ActSalesAmount = 1000000;
+                    //業績獎金核算
+                    ((Sales)emp).calCommision();
+                }
+
                 //輸出
                 Console.WriteLine($"編號:{emp.id} 姓名:{emp.name} 底薪:{emp.salary}  生日:{emp.birthdate} ");
             }
