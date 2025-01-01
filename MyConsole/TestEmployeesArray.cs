@@ -64,10 +64,10 @@ namespace MyConsole
                 else if (emp is Engineer)
                 { //如果是工程師
                     Engineer s1 = (Engineer)emp; //轉型成Engineer
-                    Console.WriteLine($"編號:{s1.id} 姓名:{s1.name} 底薪:{s1.salary}  生日:{s1.birthdate} 技術工作:{s1.Tech} 技術津貼:{s1.TechBons} 實際薪水:{s1.actSalary} ");
+                    Console.WriteLine($"編號:{s1.id} 姓名:{s1.name} 底薪:{s1.salary}  生日:{s1.birthdate} 技術工作:{s1.Tech} 技術津貼:{s1.TechBons}");
                 }
                 else {
-                    Console.WriteLine($"編號:{emp.id} 姓名:{emp.name} 底薪:{emp.salary}  生日:{emp.birthdate} 實際薪水:{emp.actSalary} ");
+                    Console.WriteLine($"編號:{emp.id} 姓名:{emp.name} 底薪:{emp.salary}  生日:{emp.birthdate}");
                 }
             }
         }
