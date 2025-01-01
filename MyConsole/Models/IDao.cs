@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +18,8 @@ namespace MyConsole.Models
         Boolean delete(K id);
         T get(K id); //傳遞一個物件進來查詢(K Generic Type) 實作時再來決定吧
         List<T> getAll(); //查詢所有資料
+
+        //抽象屬性Property 定義注入連接物件(類別)
+        IDbConnection Connection { get; set; } //實作Property Injection 注入連接物件
     }
 }
