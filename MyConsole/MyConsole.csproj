@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>MyConsole.TestMathDiv</StartupObject>
+    <StartupObject>MyConsole.ReadWriteImageFile</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,6 +56,7 @@
     <Compile Include="Models\Sales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadWriteImageFile.cs" />
     <Compile Include="TestEmployees.cs" />
     <Compile Include="TestEmployeesArray.cs" />
     <Compile Include="TestEmployeesMethod.cs" />

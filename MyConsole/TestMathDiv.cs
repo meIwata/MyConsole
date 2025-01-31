@@ -25,8 +25,7 @@ namespace MyConsole
                     //進行除法運算
                     //Math.Division(v, b); //用的是.Net的類別
                     Int32 result;
-                    if (MyConsole.Models.Math.Division(v, b, out result)) //自訂Method具有例外管理 且進行by Reference 處理值參照
-                    { //使用自己命名空間的類別
+                    if (MyConsole.Models.Math.Division(v, b, out result)) { //使用自己命名空間的類別，自訂Method具有例外管理 且進行by Reference 處理值參照
                         //如果是true，輸出處理
                         Console.WriteLine($"除法運算 {v}/{b} = {result}");
                     }
