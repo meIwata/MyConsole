@@ -19,10 +19,11 @@ namespace MyConsole
             //String path = $"C:\\Users\\lulul\\Downloads\\{fileName}.jpg"; //這樣也可以
             String path = $@"C:\Users\lulul\Downloads\{fileName}.jpg"; // \ escape character
 
+            Stream fs = null; //要給預設值，因為他不一定開啟成功
             //開啟
             try {
                 //開啟檔案Stream
-                Stream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+                fs = new FileStream(path, FileMode.Open, FileAccess.Read);
 
                 //讀取檔案byte(s)->Byte[] 陣列空間
                 Byte[] buffer = new Byte[fs.Length];
@@ -30,19 +31,25 @@ namespace MyConsole
                 //讀取檔案至緩衝區
                 fs.Read(buffer, 0, buffer.Length); //從第一個位置讀到最後一個位置。但這裡如果奘到例外不能讀取...
 
-                //關閉檔案
-                fs.Close();
+                
                 Console.WriteLine($"檔案讀取成功...{buffer.Length}");
-
-                //寫出去
+                //寫出去...
 
 
             } catch (FileNotFoundException ex) { //子類別先寫
-            
+                Console.WriteLine("檔案不存在");
+
             } catch (IOException ex) { //父類別放後面
                 Console.WriteLine("檔案存取錯誤");
+
             }
-            
+            finally { //正常或者產生例外也要到這裡
+                //關閉檔案
+                if (fs != null) {
+                    Console.WriteLine("關閉檔案");
+                    fs.Close();
+                } 
+            }
         }
     }
 }
