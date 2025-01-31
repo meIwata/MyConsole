@@ -30,7 +30,7 @@ namespace MyConsole
             //輸出結果
             Console.WriteLine($"{v}/{b} = {result}");
             } catch (FormatException ex){ //捕捉例外
-                //進行管理 (進行Logging紀錄)
+                //TODO進行管理 (進行Logging紀錄)
                 Console.WriteLine("錯誤: " +  ex.Message );//核心的錯誤給使用者看不是非常人性化的設計
             }
             //設定第二種例外處理
