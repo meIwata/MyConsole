@@ -18,7 +18,9 @@ namespace MyConsole
             Console.WriteLine("請輸入分母:");
             String baseValue = Console.ReadLine();
 
-            //轉換將字串物件轉換結構整數Int32
+            //會有較大機會是從轉換這邊有例外出現，就從這裡以下來管理
+            try { 
+            //轉換將字串物件轉換結構整數Int32 (這裡會產生格式無法轉換例外)
             Int32 v = Int32.Parse(value);
             Int32 b = Int32.Parse(baseValue);
 
@@ -27,6 +29,18 @@ namespace MyConsole
 
             //輸出結果
             Console.WriteLine($"{v}/{b} = {result}");
+            } catch (FormatException ex){ //捕捉例外
+                //進行管理 (進行Logging紀錄)
+                Console.WriteLine("錯誤: " +  ex.Message );//核心的錯誤給使用者看不是非常人性化的設計
+            }
+            //設定第二種例外處理
+            catch (OverflowException ex){
+                Console.WriteLine("錯誤: " + ex.Message);
+            }
+            //最後這裡可以放所有例外的父類別Exception
+            catch (Exception ex){ //父類例外物件要寫在最後
+                Console.WriteLine("錯誤: " + ex.Message);
+            }
         }
     }
 }
