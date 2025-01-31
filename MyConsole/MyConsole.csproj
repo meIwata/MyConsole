@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>MyConsole.TestEmployeesArray</StartupObject>
+    <StartupObject>MyConsole.TestMathException</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,14 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\CustomersDao.cs" />
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\EmployeesDao.cs" />
     <Compile Include="Models\Engineer.cs" />
+    <Compile Include="Models\IDao.cs" />
     <Compile Include="Models\Sales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestEmployees.cs" />
     <Compile Include="TestEmployeesArray.cs" />
     <Compile Include="TestEmployeesMethod.cs" />
+    <Compile Include="TestMathException.cs" />
     <Compile Include="TestPoly.cs" />
     <Compile Include="TestSalesEmployees.cs" />
     <Compile Include="TestString.cs" />
