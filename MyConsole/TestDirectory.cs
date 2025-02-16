@@ -19,7 +19,10 @@ namespace MyConsole
             if (Directory.Exists(fileName)) { 
                 // 存在
                 Console.WriteLine("目錄存在");
-            }else {
+                //找到目錄後，要開啟個體物件對應DirectoryInfo
+
+            }
+            else {
                 // 不存在
                 Console.WriteLine("目錄不存在");
             }
