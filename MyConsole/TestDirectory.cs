@@ -51,7 +51,7 @@ namespace MyConsole
                 DirectoryInfo newDir = Directory.CreateDirectory(fileName);
 
                 if (newDir.Exists) { // 用屬性來問出來
-                    Console.WriteLine("目錄建立成功"); // 要測試成功，上面路徑要改
+                    Console.WriteLine("目錄建立成功"); // 要測試成功，上面路徑要改，改成"C:\\Users\\lulul\\Downloads123"
                 }
                 else{
                     Console.WriteLine("目錄建立失敗");
