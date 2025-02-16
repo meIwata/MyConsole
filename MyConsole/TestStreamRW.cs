@@ -19,8 +19,24 @@ namespace MyConsole
             //建立FileInfo物件
             FileInfo file = new FileInfo(fileName); //也有可能不存在，建立一個物件邏輯應對 不具有Open(走向Stream)
             if (file.Exists) {
-                //處理
+                //存在
                 Console.WriteLine("檔案存在");
+                //處理(開啟檔案Stream)，但有可能檔案打不開所以要做例外管理
+                try {
+                    Stream fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read);
+                    
+                    //讀取檔案內容--先準備一下緩存區 Byte陣列
+                    Byte[] buffer = new byte[fs.Length];
+                    //讀取圖片內容到緩存區去
+                    fs.Read(buffer, 0, buffer.Length); //從0讀取到最後。可能沒有權限讀取
+                    
+                    //關閉Stream
+                    fs.Close();
+                    Console.WriteLine("讀取檔案內容成功");
+                }
+                catch(IOException ex) { 
+                    Console.WriteLine("開啟檔案失敗，可能是權限不足");
+                }
             }
             else
             {
