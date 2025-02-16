@@ -13,7 +13,10 @@ namespace MyConsole
         //Entry point
         public static void Main() {
             //判斷指定目錄是否存在??
-            String fileName = @"C:\Users\lulul\Downloads";
+            //String fileName = @"C:\Users\lulul\Downloads";
+            String fileName = "C:\\Users\\lulul\\Downloads123"; // 兩種寫法
+
+        
 
             //Exists static method判斷目錄是否存在
             if (Directory.Exists(fileName)) { 
@@ -44,6 +47,15 @@ namespace MyConsole
             else {
                 // 不存在
                 Console.WriteLine("目錄不存在");
+                //建立目錄 使用Directory類別的static CreateDirectory方法
+                DirectoryInfo newDir = Directory.CreateDirectory(fileName);
+
+                if (newDir.Exists) { // 用屬性來問出來
+                    Console.WriteLine("目錄建立成功"); // 要測試成功，上面路徑要改
+                }
+                else{
+                    Console.WriteLine("目錄建立失敗");
+                }
             }
         }
     }
