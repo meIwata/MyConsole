@@ -33,8 +33,16 @@ namespace MyConsole
                     //關閉Stream
                     fs.Close();
                     Console.WriteLine("讀取檔案內容成功");
+
+                    //寫出去 建立新檔案 操作FileInfo物件來完成
+                    //原來開啟檔案檔案名稱 取出檔名 延伸一個新檔名
+                    String name = file.Name.Remove(file.Name.LastIndexOf('.')); //取出檔案名，不要副檔名
+                    Console.WriteLine(name);
+                    
+                    //Console.WriteLine(file.Name); //先印出他的檔名
+                    //FileInfo newFile = new FileInfo(@"D:\IDP\new.txt");
                 }
-                catch(IOException ex) { 
+                catch (IOException ex) { 
                     Console.WriteLine("開啟檔案失敗，可能是權限不足");
                 }
             }
