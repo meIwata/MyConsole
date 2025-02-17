@@ -33,12 +33,20 @@ namespace MyConsole
                     //關閉Stream
                     fs.Close();
                     Console.WriteLine("讀取檔案內容成功");
-
+                    //取出Path
+                    String path = file.Directory.FullName;
+                    Console.WriteLine("檔案路徑: " + path);
                     //寫出去 建立新檔案 操作FileInfo物件來完成
                     //原來開啟檔案檔案名稱 取出檔名 延伸一個新檔名
                     String name = file.Name.Remove(file.Name.LastIndexOf('.')); //取出檔案名，不要副檔名
                     Console.WriteLine(name);
-                    
+                    String newFile = $@"{path}\{name}_copy.jpg";
+                    //建立FileInfo物件
+                    FileInfo newFileInfo = new FileInfo(newFile); //邏輯對應
+                    //建立新檔案
+                    newFileInfo.Create();
+
+
                     //Console.WriteLine(file.Name); //先印出他的檔名
                     //FileInfo newFile = new FileInfo(@"D:\IDP\new.txt");
                 }
